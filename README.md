@@ -36,9 +36,11 @@ A foundational RESTful API built to track and manage personal software projects 
 
 4. Run the ProjectTrackerApiApplication.java main class.
 
-5. The API will be accessible at http://localhost:8080.   
-📌 Example JSON Payload (For POST/PUT requests): 
-JSON
+5. The API will be accessible at http://localhost:8080.
+ 
+📌 Example JSON Payload (For POST/PUT requests):
+
+JSON:
 {
     "id": 104,
     "title": "E-Commerce Backend",
