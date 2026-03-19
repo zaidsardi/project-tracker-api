@@ -29,7 +29,7 @@ A foundational RESTful API built to track and manage personal software projects 
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/zaidalsardi/project-tracker-api.git](https://github.com/zaidalsardi/project-tracker-api.git)
+   git clone https://github.com/zaidalsardi/project-tracker-api.git
 2. Open the project in your favorite IDE (e.g., IntelliJ IDEA).
 
 3. Ensure you have Java and Maven installed.
