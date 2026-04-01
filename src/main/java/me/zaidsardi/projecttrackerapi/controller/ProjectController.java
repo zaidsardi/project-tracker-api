@@ -14,8 +14,12 @@ public class ProjectController {
         this.service = service;
     }
     @GetMapping
-    public List<Project> getProjects(@RequestParam(required = false)ProjectStatus status){
-        return service.getProjects(status);
+    public List<Project> getProjects(){
+        return service.getProjects();
+    }
+    @GetMapping("{/id}")
+    public Project getProjectById(@RequestParam int id){
+        return service.getProjectById(id);
     }
     @PostMapping
     public Project addProject(@RequestBody Project project){
