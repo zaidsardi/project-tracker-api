@@ -10,11 +10,6 @@ import java.util.Arrays;
 import java.util.List;
 @Service
 public class ProjectService {
-//    private List<Project> projectList = new ArrayList<>(Arrays.asList(
-//            new Project(101,"Clinic Appointment API","Spring-boot", ProjectStatus.IN_PROGRESS),
-//            new Project(102,"Task Tracker API","Node.js",ProjectStatus.PLANNED),
-//            new Project(103,"Portfolio ","HTML/CSS/JavaScript",ProjectStatus.COMPLETED)
-//    ));
 ProjectRepository projectRepository;
 
     public ProjectService(ProjectRepository projectRepository) {
@@ -33,20 +28,20 @@ ProjectRepository projectRepository;
     }
 
     public Project updateProject(int id, Project updatedProject) {
-        for ( Project existingProject : projectList ){
-            if (existingProject.getId() == id){
-                existingProject.setTitle(updatedProject.getTitle());
-                existingProject.setStatus(updatedProject.getStatus());
-                existingProject.setTechStack(updatedProject.getTechStack());
-                return existingProject;
-            }
+        Project existingProject;
+        if (projectRepository.findById(id).isPresent()){
+            existingProject = projectRepository.findById(id).get();
+            existingProject.setTitle(updatedProject.getTitle());
+            existingProject.setStatus(updatedProject.getStatus());
+            existingProject.setTechStack(updatedProject.getTechStack());
+            return projectRepository.save(existingProject);
         }
-        return null;
+        else
+            return null;
     }
 
-    public boolean deleteProject(int id) {
-        return projectList.removeIf(p -> p.getId() == id);
-
+    public void deleteProject(int id) {
+         projectRepository.deleteById(id);
     }
 
 

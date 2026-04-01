@@ -18,7 +18,7 @@ public class ProjectController {
         return service.getProjects();
     }
     @GetMapping("{/id}")
-    public Project getProjectById(@RequestParam int id){
+    public Project getProjectById(@PathVariable int id){
         return service.getProjectById(id);
     }
     @PostMapping
@@ -30,7 +30,7 @@ public class ProjectController {
         return service.updateProject(id,project);
     }
     @DeleteMapping("/{id}")
-    public boolean deleteProject(@PathVariable int id){
-        return service.deleteProject(id);
+    public void deleteProject(@PathVariable int id){
+         service.deleteProject(id);
     }
 }
