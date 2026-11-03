@@ -29,7 +29,7 @@ public class ProjectController {
     public Project updateProject(@PathVariable int id,@RequestBody Project project){
         return service.updateProject(id,project);
     }
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{id}") @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteProject(@PathVariable int id){
          service.deleteProject(id);
     }
