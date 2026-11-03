@@ -1,5 +1,6 @@
 package me.zaidsardi.projecttrackerapi.service;
 
+import me.zaidsardi.projecttrackerapi.excption.ResourceNotFoundException;
 import me.zaidsardi.projecttrackerapi.model.ProjectStatus;
 import me.zaidsardi.projecttrackerapi.model.Project;
 import me.zaidsardi.projecttrackerapi.repository.ProjectRepository;
@@ -10,7 +11,7 @@ import java.util.Arrays;
 import java.util.List;
 @Service
 public class ProjectService {
-ProjectRepository projectRepository;
+    final ProjectRepository projectRepository;
 
     public ProjectService(ProjectRepository projectRepository) {
         this.projectRepository = projectRepository;
