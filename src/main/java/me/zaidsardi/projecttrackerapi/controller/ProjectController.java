@@ -21,7 +21,7 @@ public class ProjectController {
     public Project getProjectById(@PathVariable int id){
         return service.getProjectById(id);
     }
-    @PostMapping
+    @PostMapping @ResponseStatus(HttpStatus.CREATED)
     public Project addProject(@RequestBody Project project){
         return service.addProject(project);
     }
