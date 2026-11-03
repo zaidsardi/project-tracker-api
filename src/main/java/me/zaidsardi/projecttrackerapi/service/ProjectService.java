@@ -20,7 +20,8 @@ ProjectRepository projectRepository;
             return projectRepository.findAll();
     }
     public Project getProjectById(int id) {
-        return projectRepository.findById(id).orElse(new Project());
+        return projectRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("project not found"));
     }
     public Project addProject(Project project) {
           projectRepository.save(project);
