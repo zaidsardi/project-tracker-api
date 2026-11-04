@@ -32,8 +32,8 @@ A robust RESTful API designed to manage and track software projects. Built with 
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/zaidsardi/project-tracker-api.git](https://github.com/zaidsardi/project-tracker-api.git) ```
-Configure the Database:
+   git clone https://github.com/zaidsardi/project-tracker-api.git ```
+2. **Configure the Database:**
 Ensure you have PostgreSQL installed and running. Create a database named project_tracker (or update the database URL in the properties file). Update the src/main/resources/application.properties file with your PostgreSQL credentials:
 
 ```Properties
@@ -42,10 +42,10 @@ spring.datasource.username=your_username
 spring.datasource.password=your_password
 spring.jpa.hibernate.ddl-auto=update ```
 ```
-Run the Application:
+3. **Run the Application:**
 Open the project in your IDE (e.g., IntelliJ IDEA) and run the ProjectTrackerApiApplication.java main class.
 
-Access the API:
+4. **Access the API:**
 The API will be accessible at ` http://localhost:8080/api/v1/projects `
 
 📌 Example JSON Payload (For POST/PUT requests)
