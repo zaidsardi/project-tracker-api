@@ -1,6 +1,5 @@
 package me.zaidsardi.projecttrackerapi.controller;
 
-import me.zaidsardi.projecttrackerapi.model.ProjectStatus;
 import me.zaidsardi.projecttrackerapi.model.Project;
 import me.zaidsardi.projecttrackerapi.service.ProjectService;
 import org.springframework.http.HttpStatus;
@@ -21,6 +20,10 @@ public class ProjectController {
     @GetMapping("/{id}")
     public Project getProjectById(@PathVariable int id){
         return service.getProjectById(id);
+    }
+    @GetMapping("/search")
+    public List<Project> searchProjects(@RequestParam String title){
+        return service.searchProjects(title);
     }
     @PostMapping @ResponseStatus(HttpStatus.CREATED)
     public Project addProject(@RequestBody Project project){

@@ -1,13 +1,10 @@
 package me.zaidsardi.projecttrackerapi.service;
 
 import me.zaidsardi.projecttrackerapi.excption.ResourceNotFoundException;
-import me.zaidsardi.projecttrackerapi.model.ProjectStatus;
 import me.zaidsardi.projecttrackerapi.model.Project;
 import me.zaidsardi.projecttrackerapi.repository.ProjectRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 @Service
 public class ProjectService {
@@ -47,4 +44,7 @@ public class ProjectService {
     }
 
 
+    public List<Project> searchProjects(String title) {
+        return projectRepository.searchProjects(title);
+    }
 }
