@@ -3,12 +3,11 @@
 A robust RESTful API designed to manage and track software projects. Built with Java 17 and Spring Boot, this project demonstrates enterprise-level backend engineering practices, transitioning from basic in-memory structures to a fully persistent, decoupled, and scalable architecture.
 
 ## 🛠️ Tech Stack
-- **Language:** Java 17
+- **Language:** Java 
 - **Framework:** Spring Boot (Spring Web, Spring Data JPA)
 - **Database:** PostgreSQL
 - **ORM:** Hibernate
 - **Architecture:** MVC (Model-View-Controller)
-- **Data Transfer:** DTO Pattern (using Java Records)
 - **Build Tool:** Maven
 
 ## 💡 Key Engineering Concepts Applied
@@ -16,7 +15,6 @@ A robust RESTful API designed to manage and track software projects. Built with 
 - **Data Persistence:** Integrated PostgreSQL via Spring Data JPA for robust data storage and retrieval.
 - **DTO Pattern:** Implemented the Data Transfer Object (DTO) pattern using modern **Java Records** to decouple the API layer from the Database Entities, ensuring security and preventing mass-assignment vulnerabilities.
 - **Dependency Injection (DI):** Strictly utilized Constructor Injection (Best Practice) across Controllers and Services.
-- **Modern Java Features:** Leveraged Java 17 `Record` for immutable DTOs and the `Stream API` with Method References for elegant data transformations (`List<Entity>` to `List<DTO>`).
 - **Clean Code & Separation of Concerns:** Kept Controllers thin and focused purely on HTTP routing, offloading all business logic and mapping to the Service and Mapper layers.
 
 ## 📡 API Endpoints
